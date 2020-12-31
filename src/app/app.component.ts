@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FrontEnd';
+  listCitas: any[] = [];
+
+  agregarCita(cita: any) {
+    this.listCitas.push(cita);
+    console.log('Hola, soy el padre');
+  }
+
+  eliminarCitaListado(index: number) {
+    this.listCitas.splice(index, 1);
+  }
 }
